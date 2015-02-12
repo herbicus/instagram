@@ -1,0 +1,60 @@
+<div class="instamatic-view">
+  <div class="l-row"><h1>Instagram App - Skateboard Tag Current</h1></div>
+
+  <!--<section class="l-row">-->
+    <!--<aside class="l-sidebar">-->
+      <!--<h1>hello</h1>-->
+    <!--</aside>-->
+
+    <!--<div class="l-main-container">-->
+      <!--<h1>yeah</h1>-->
+    <!--</div>-->
+  <!--</section>-->
+
+  <div class="l-row" data-ng-repeat="item in instamaticCtrl.igData">
+
+    <aside class="l-sidebar">
+      <h3>{{ item.user.username }}</h3>
+      <br/>
+
+      <img data-ng-src="{{ item.user.profile_picture }}"/>
+
+      <p><strong>{{ item.user.name }}</strong></p>
+      <cite data-ng-repeat="tag in item.tags">#{{ tag }} </cite>
+
+    </aside>
+
+
+    <div class="l-main-container">
+      <br/>
+      <img data-ng-src="{{ item.images.low_resolution.url }}"/>
+      <br/>
+
+      <p>{{ item.caption.text }}</p>
+      <br/>
+      <a ng-href="{{ item.link.url }}" target="_blank">
+      <cite>{{ item.link }}</cite>
+      <br/>
+      <hr/>
+    </div>
+
+
+  <!--<ul data-ng-repeat="item in instamaticCtrl.igData">-->
+    <!--<li><h3>{{ item.user.username }}</h3></li>-->
+    <!--<li>-->
+      <!--<em>-->
+        <!--<span data-ng-repeat="tag in item.tags">#{{ tag }}</span>-->
+      <!--</em>-->
+    <!--</li>-->
+    <!--<li>-->
+      <!--<img data-ng-src="{{ item.images.low_resolution.url }}"/>-->
+    <!--</li>-->
+    <!--<li>-->
+      <!--<h2>{{ item.caption.text }}</h2>-->
+    <!--</li>-->
+
+  <!--</ul>-->
+
+
+
+<!--</div>-->
